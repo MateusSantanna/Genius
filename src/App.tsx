@@ -5,7 +5,7 @@ function App() {
   const [arrayGame, setArrayGame] = useState([]);
   const [arrayUser, setArrayUser] = useState([]);
   const [score, setScore] = useState(0);
-  const [instruction, setInstruction] = useState("");
+  const [instruction, setInstruction] = useState("Decore os Números");
 
   return (
     <Game

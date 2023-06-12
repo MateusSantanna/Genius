@@ -24,3 +24,11 @@ export interface IButton {
   instruction: string;
   setInstruction: string;
 }
+
+export interface IInstruction {
+  arrayGame: Array<number>;
+  arrayUser: Array<number>;
+  setScore: number;
+  instruction: string;
+  setInstruction: string;
+}

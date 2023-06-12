@@ -1,4 +1,14 @@
 import { IButton } from "../../interfaces/interfaces";
+import {
+  OneToThree,
+  FourToSix,
+  SevenToNine,
+  Zero,
+  OneToThreeClick,
+  FourToSixClick,
+  SevenToNineClick,
+  ZeroClick,
+} from "./style";
 
 function Buttons({
   arrayGame,
@@ -9,35 +19,61 @@ function Buttons({
   instruction,
   setInstruction,
 }: IButton) {
-  function generatorNumber() {
-    let arraySorteio = Array(10).keys();
+  function showAllNumbers(number: number) {
+    for (let i = 0; i <= arrayGame.length; i++) {
+      if (arrayGame[i] === number) {
+        return <h1>{number}</h1>;
+      }
+    }
   }
 
   return instruction === "Sua Vez" ? (
     <>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button>0</button>
+      <OneToThreeClick>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+      </OneToThreeClick>
+
+      <FourToSixClick>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+      </FourToSixClick>
+
+      <SevenToNineClick>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+      </SevenToNineClick>
+
+      <ZeroClick>
+        <button>0</button>
+      </ZeroClick>
     </>
   ) : (
     <>
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>0</div>
+      <OneToThree>
+        <button onClick={() => showAllNumbers(1)}>1</button>
+        <button onClick={() => showAllNumbers(2)}>2</button>
+        <button onClick={() => showAllNumbers(3)}>3</button>
+      </OneToThree>
+
+      <FourToSix>
+        <button onClick={() => showAllNumbers(4)}>4</button>
+        <button onClick={() => showAllNumbers(5)}>5</button>
+        <button onClick={() => showAllNumbers(6)}>6</button>
+      </FourToSix>
+
+      <SevenToNine>
+        <button onClick={() => showAllNumbers(7)}>7</button>
+        <button onClick={() => showAllNumbers(8)}>8</button>
+        <button onClick={() => showAllNumbers(9)}>9</button>
+      </SevenToNine>
+
+      <Zero>
+        <button onClick={() => showAllNumbers(0)}>0</button>
+      </Zero>
     </>
   );
 }
