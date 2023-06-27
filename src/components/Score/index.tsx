@@ -1,11 +1,13 @@
-import { ScoreActual, ScoreText } from "./style";
+import { CentralDiv, ScoreActual, ScoreText } from "./style";
 import { IScore } from "../../interfaces/interfaces";
 
 function Score({ score }: IScore) {
   return (
     <>
-      <ScoreText>Pontuação</ScoreText>
-      <ScoreActual>{score}</ScoreActual>
+      <CentralDiv>
+        <ScoreText>Pontuação:</ScoreText>
+        <ScoreActual>{score}</ScoreActual>
+      </CentralDiv>
     </>
   );
 }

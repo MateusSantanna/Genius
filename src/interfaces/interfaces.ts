@@ -1,34 +1,16 @@
 export interface IGenius {
-  arrayGame: Array<number>;
-  setArrayGame: Array<number>;
-  arrayUser: Array<number>;
-  setArrayUser: Array<number>;
-  score: number;
-  setScore: number;
-  instruction: string;
-  setInstruction: string;
-  begin: boolean;
-  setBegin: boolean;
-}
-
-export interface IScore {
-  score: number;
-}
-
-export interface IButton {
-  arrayGame: Array<number>;
-  setArrayGame: Array<number>;
-  arrayUser: Array<number>;
-  setArrayUser: Array<number>;
-  setScore: number;
-  instruction: string;
-  setInstruction: string;
-}
-
-export interface IInstruction {
-  arrayGame: Array<number>;
-  arrayUser: Array<number>;
-  setScore: number;
-  instruction: string;
-  setInstruction: string;
+  arrayGame?: number[];
+  setArrayGame?: (value: number[]) => void;
+  arrayUser?: number[];
+  setArrayUser?: (value: number[]) => void | undefined;
+  arrayScreen?: number[];
+  setArrayScreen?: (value: number[]) => void | undefined;
+  score?: number;
+  setScore?: (value: number) => void;
+  instruction?: string;
+  setInstruction?: (value: string) => void;
+  begin?: boolean;
+  setBegin?: (value: boolean) => void;
+  numberScreen?: number;
+  setNumberScreen?: (value: number) => void;
 }

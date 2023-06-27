@@ -1,13 +1,7 @@
 import { IGenius } from "../../interfaces/interfaces";
 import { ResultInstructions } from "./style";
 
-function Instructions({
-  instruction,
-  setInstruction,
-  arrayGame,
-  arrayUser,
-  score,
-}: IGenius) {
+function Instructions({ instruction }: IGenius) {
   return (
     <div>
       <ResultInstructions>{instruction}</ResultInstructions>
