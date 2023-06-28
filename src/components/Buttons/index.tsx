@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { IGenius } from "../../interfaces/interfaces";
+import { useEffect } from "react";
+import { IButtons } from "../../interfaces/interfaces";
 import {
   OneToThree,
   FourToSix,
@@ -11,26 +11,8 @@ import {
   ZeroClick,
 } from "./style";
 
-interface IButtons {
-  arrayGame?: number[];
-  setArrayGame?: (value: number[]) => void;
-  arrayUser?: number[];
-  setArrayUser?: (value: number[]) => void | undefined;
-  arrayScreen?: number[];
-  setArrayScreen?: (value: number[]) => void | undefined;
-  score?: number;
-  setScore?: (value: number) => void;
-  instruction?: string;
-  setInstruction?: (value: string) => void;
-  begin?: boolean;
-  setBegin?: (value: boolean) => void;
-  numberScreen?: number;
-  setNumberScreen?: (value: number) => void;
-}
-
 const Buttons = ({
   arrayGame,
-  setArrayGame,
   arrayUser,
   setArrayUser,
   score,
@@ -59,7 +41,7 @@ const Buttons = ({
   }, [arrayUser]);
 
   const checkNumbers = (number: number) => {
-    setArrayUser((prevArray: number[]) => [...prevArray, number]);
+    setArrayUser([...(arrayUser || []), number]);
   };
 
   return instruction === "Sua Vez" ? (

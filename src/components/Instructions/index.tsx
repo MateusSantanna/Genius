@@ -1,7 +1,7 @@
-import { IGenius } from "../../interfaces/interfaces";
+import { IInstruction } from "../../interfaces/interfaces";
 import { ResultInstructions } from "./style";
 
-function Instructions({ instruction }: IGenius) {
+function Instructions({ instruction }: IInstruction) {
   return (
     <div>
       <ResultInstructions>{instruction}</ResultInstructions>

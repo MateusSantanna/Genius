@@ -8,9 +8,7 @@ const Game = () => {
   const [begin, setBegin] = useState<boolean>(false);
   const [arrayGame, setArrayGame] = useState<number[]>([]);
   const [arrayScreen, setArrayScreen] = useState<number[]>(arrayGame);
-  const [numberScreen, setNumberScreen] = useState<number | undefined>(
-    arrayScreen[0]
-  );
+  const [numberScreen, setNumberScreen] = useState<number>(arrayScreen[0]);
   const [arrayUser, setArrayUser] = useState<number[]>([]);
   const [score, setScore] = useState<number>(0);
   const [instruction, setInstruction] = useState<string>("Decore os Números");
@@ -37,7 +35,7 @@ const Game = () => {
 
   useEffect(() => {
     if (begin && arrayScreen.length > 0) {
-      setTimeout(countNumbers, 1000);
+      setTimeout(countNumbers, 500);
     }
   }, [begin, arrayScreen]);
 
@@ -66,13 +64,7 @@ const Game = () => {
       ) : (
         <>
           <Score score={score} />
-          <Instructions
-            instruction={instruction}
-            setInstruction={setInstruction}
-            arrayGame={arrayGame}
-            arrayUser={arrayUser}
-            score={score}
-          />
+          <Instructions instruction={instruction} />
 
           {instruction === "Sua Vez" ||
           instruction === "Resposta Errada" ||
@@ -100,13 +92,16 @@ const Game = () => {
 
           <Buttons
             arrayGame={arrayGame}
-            setArrayGame={setArrayGame}
             arrayUser={arrayUser}
             setArrayUser={setArrayUser}
             score={score}
             setScore={setScore}
             instruction={instruction}
             setInstruction={setInstruction}
+            arrayScreen={arrayScreen}
+            setArrayScreen={setArrayScreen}
+            numberScreen={numberScreen}
+            setNumberScreen={setNumberScreen}
           />
         </>
       )}
