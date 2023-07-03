@@ -128,3 +128,15 @@ export const ZeroClick = styled.div`
     text-align: center;
   }
 `;
+
+export const StyleEffect = styled.button`
+  font-size: 3rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  background-color: red;
+  color: white;
+  width: 3rem;
+  height: 4rem;
+  text-align: center;
+  pointer-events: none;
+`;

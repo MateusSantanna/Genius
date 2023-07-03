@@ -3,6 +3,7 @@ import Score from "../../components/Score";
 import Instructions from "../../components/Instructions";
 import { useEffect, useState } from "react";
 import { CorrectAnswer, NumberScreen } from "./style";
+import classnames from "classnames";
 
 const Game = () => {
   const [begin, setBegin] = useState<boolean>(false);
@@ -12,6 +13,7 @@ const Game = () => {
   const [arrayUser, setArrayUser] = useState<number[]>([]);
   const [score, setScore] = useState<number>(0);
   const [instruction, setInstruction] = useState<string>("Decore os Números");
+  const [numberScreenColor, setNumberScreenColor] = useState<string>("");
 
   const generateNumber = () => {
     const randomNumber = Math.floor(Math.random() * 10);
@@ -48,9 +50,27 @@ const Game = () => {
     setInstruction("Decore os Números");
   }
 
+  const generateRandomColor = () => {
+    const colors = [
+      "red",
+      "blue",
+      "green",
+      "yellow",
+      "orange",
+      "pink",
+      "brown",
+      "gray",
+    ];
+
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    return randomColor;
+  };
+
   useEffect(() => {
     if (arrayScreen.length > 0) {
       setNumberScreen(arrayScreen[0]);
+      setNumberScreenColor(generateRandomColor());
     }
   }, [arrayScreen]);
 
@@ -71,7 +91,11 @@ const Game = () => {
           instruction === "Resposta Correta" ? (
             <h1></h1>
           ) : (
-            <NumberScreen>{numberScreen}</NumberScreen>
+            <NumberScreen
+              className={classnames("number-screen", numberScreenColor)}
+            >
+              {numberScreen}
+            </NumberScreen>
           )}
 
           {instruction === "Resposta Correta" ? (
