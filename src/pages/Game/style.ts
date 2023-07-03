@@ -24,36 +24,8 @@ export const NumberScreen = styled.h1`
     animation: ${blink} 0.5s infinite;
   }
 
-  &.red {
-    color: red;
-  }
-
-  &.blue {
-    color: blue;
-  }
-
-  &.green {
-    color: green;
-  }
-
-  &.orange {
-    color: orange;
-  }
-
-  &.yellow {
-    color: yellow;
-  }
-
-  &.pink {
-    color: pink;
-  }
-
-  &.brown {
-    color: brown;
-  }
-
-  &.gray {
-    color: gray;
+  &.white {
+    color: white;
   }
 `;
 
@@ -61,4 +33,11 @@ export const CorrectAnswer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const BeginGame = styled.div`
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
 `;

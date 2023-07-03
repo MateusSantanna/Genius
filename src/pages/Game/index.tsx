@@ -2,7 +2,7 @@ import Buttons from "../../components/Buttons";
 import Score from "../../components/Score";
 import Instructions from "../../components/Instructions";
 import { useEffect, useState } from "react";
-import { CorrectAnswer, NumberScreen } from "./style";
+import { BeginGame, CorrectAnswer, NumberScreen } from "./style";
 import classnames from "classnames";
 
 const Game = () => {
@@ -51,16 +51,7 @@ const Game = () => {
   }
 
   const generateRandomColor = () => {
-    const colors = [
-      "red",
-      "blue",
-      "green",
-      "yellow",
-      "orange",
-      "pink",
-      "brown",
-      "gray",
-    ];
+    const colors = ["white"];
 
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
@@ -78,8 +69,10 @@ const Game = () => {
     <>
       {!begin ? (
         <>
-          <h1>BEM VINDO AO GENIUS</h1>
-          <button onClick={generateNumber}>Começar</button>
+          <BeginGame>
+            <h1>BEM VINDO AO GENIUS</h1>
+            <button onClick={generateNumber}>Começar</button>
+          </BeginGame>
         </>
       ) : (
         <>
