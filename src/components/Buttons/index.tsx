@@ -9,7 +9,6 @@ import {
   FourToSixClick,
   SevenToNineClick,
   ZeroClick,
-  StyleEffect,
 } from "./style";
 
 const Buttons = ({
@@ -20,7 +19,6 @@ const Buttons = ({
   setScore,
   instruction,
   setInstruction,
-  numberScreen,
 }: IButtons) => {
   useEffect(() => {
     let isCorrect = true;
@@ -73,25 +71,25 @@ const Buttons = ({
   ) : (
     <>
       <OneToThree>
-        {numberScreen === 1 ? <StyleEffect>1</StyleEffect> : <button>1</button>}
-        {numberScreen === 2 ? <StyleEffect>2</StyleEffect> : <button>2</button>}
-        {numberScreen === 3 ? <StyleEffect>3</StyleEffect> : <button>3</button>}
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
       </OneToThree>
 
       <FourToSix>
-        {numberScreen === 4 ? <StyleEffect>4</StyleEffect> : <button>4</button>}
-        {numberScreen === 5 ? <StyleEffect>5</StyleEffect> : <button>5</button>}
-        {numberScreen === 6 ? <StyleEffect>6</StyleEffect> : <button>6</button>}
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
       </FourToSix>
 
       <SevenToNine>
-        {numberScreen === 7 ? <StyleEffect>7</StyleEffect> : <button>7</button>}
-        {numberScreen === 8 ? <StyleEffect>8</StyleEffect> : <button>8</button>}
-        {numberScreen === 9 ? <StyleEffect>9</StyleEffect> : <button>9</button>}
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
       </SevenToNine>
 
       <Zero>
-        {numberScreen === 0 ? <StyleEffect>0</StyleEffect> : <button>0</button>}
+        <button>0</button>
       </Zero>
     </>
   );

@@ -14,4 +14,5 @@ export const ScoreActual = styled.h1`
 export const CentralDiv = styled.div`
   display: flex;
   justify-content: center;
+  height: 6rem;
 `;
