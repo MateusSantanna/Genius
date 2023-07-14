@@ -89,7 +89,7 @@ const Buttons = ({
       </SevenToNine>
 
       <Zero>
-        <button onClick={() => changeColor(0)}>0</button>
+        <button>0</button>
       </Zero>
     </>
   );
