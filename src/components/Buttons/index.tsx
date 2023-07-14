@@ -19,6 +19,7 @@ const Buttons = ({
   setScore,
   instruction,
   setInstruction,
+  changeColor,
 }: IButtons) => {
   useEffect(() => {
     let isCorrect = true;
@@ -89,7 +90,7 @@ const Buttons = ({
       </SevenToNine>
 
       <Zero>
-        <button>0</button>
+        <button onClick={() => changeColor(0)}>0</button>
       </Zero>
     </>
   );
