@@ -35,5 +35,4 @@ export interface IButtons {
   setInstruction: (value: string) => void;
   numberScreen: number;
   setNumberScreen: (value: number) => void;
-  changeColor: (value: number) => void;
 }
