@@ -19,7 +19,6 @@ const Buttons = ({
   setScore,
   instruction,
   setInstruction,
-  changeColor,
 }: IButtons) => {
   useEffect(() => {
     let isCorrect = true;
