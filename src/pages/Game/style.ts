@@ -15,28 +15,45 @@ export const StyledGame = styled.div`
   flex-direction: column;
   margin-top: 1rem;
   justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    margin-top: 4rem;
+  }
 `;
 
 export const StyledBorder = styled.div`
   margin: auto;
-  width: 30%;
+  width: 80%;
   height: 30%;
   background-color: white;
+
+  @media (min-width: 768px) {
+    width: 30%;
+  }
 `;
 
 export const BeginGame = styled.div`
   display: grid;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
+  margin-top: 4rem;
 
   h1 {
     color: white;
     font-size: 4rem;
+    text-align: center;
+
+    @media (max-width: 480px) {
+      font-size: 3rem;
+    }
   }
 
   button {
     font-size: 2rem;
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
   }
 `;
 
@@ -58,10 +75,22 @@ export const NumberScreen = styled.h1`
   &.white {
     color: white;
   }
+
+  @media (max-width: 480px) {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 2.5rem;
+  }
 `;
 
 export const CorrectAnswer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
