@@ -9,6 +9,37 @@ const blink = keyframes`
   }
 `;
 
+export const StyledGame = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  justify-content: center;
+`;
+
+export const StyledBorder = styled.div`
+  margin: auto;
+  width: 30%;
+  height: 30%;
+  background-color: white;
+`;
+
+export const BeginGame = styled.div`
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+
+  h1 {
+    color: white;
+    font-size: 4rem;
+  }
+
+  button {
+    font-size: 2rem;
+  }
+`;
+
 export const NumberScreen = styled.h1`
   width: 4rem;
   height: 4rem;
@@ -34,20 +65,3 @@ export const CorrectAnswer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-export const BeginGame = styled.div`
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  margin-top: 8rem;
-
-  h1 {
-    font-size: 4rem;
-  }
-
-  button {
-    font-size: 2rem;
-  }
-`;
-
-export const StyledGame = styled.div``;

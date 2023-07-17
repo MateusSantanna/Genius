@@ -2,7 +2,13 @@ import Buttons from "../../components/Buttons";
 import Score from "../../components/Score";
 import Instructions from "../../components/Instructions";
 import { useEffect, useState } from "react";
-import { BeginGame, CorrectAnswer, NumberScreen, StyledGame } from "./style";
+import {
+  BeginGame,
+  CorrectAnswer,
+  NumberScreen,
+  StyledBorder,
+  StyledGame,
+} from "./style";
 import classnames from "classnames";
 
 const Game = () => {
@@ -77,50 +83,52 @@ const Game = () => {
       ) : (
         <>
           <StyledGame>
-            <Score score={score} />
-            <Instructions instruction={instruction} />
+            <StyledBorder>
+              <Score score={score} />
+              <Instructions instruction={instruction} />
 
-            {instruction === "Sua Vez" ||
-            instruction === "Resposta Errada" ||
-            instruction === "Resposta Correta" ? (
-              <h1></h1>
-            ) : (
-              <NumberScreen
-                className={classnames("number-screen", numberScreenColor)}
-              >
-                {numberScreen}
-              </NumberScreen>
-            )}
+              {instruction === "Sua Vez" ||
+              instruction === "Resposta Errada" ||
+              instruction === "Resposta Correta" ? (
+                <h1></h1>
+              ) : (
+                <NumberScreen
+                  className={classnames("number-screen", numberScreenColor)}
+                >
+                  {numberScreen}
+                </NumberScreen>
+              )}
 
-            {instruction === "Resposta Correta" ? (
-              <>
-                <CorrectAnswer>
-                  <button onClick={generateNumber}>Continuar</button>
-                </CorrectAnswer>
-              </>
-            ) : null}
+              {instruction === "Resposta Correta" ? (
+                <>
+                  <CorrectAnswer>
+                    <button onClick={generateNumber}>Continuar</button>
+                  </CorrectAnswer>
+                </>
+              ) : null}
 
-            {instruction === "Resposta Errada" ? (
-              <>
-                <CorrectAnswer>
-                  <button onClick={() => endGame()}>Voltar ao Menu</button>
-                </CorrectAnswer>
-              </>
-            ) : null}
+              {instruction === "Resposta Errada" ? (
+                <>
+                  <CorrectAnswer>
+                    <button onClick={() => endGame()}>Voltar ao Menu</button>
+                  </CorrectAnswer>
+                </>
+              ) : null}
 
-            <Buttons
-              arrayGame={arrayGame}
-              arrayUser={arrayUser}
-              setArrayUser={setArrayUser}
-              score={score}
-              setScore={setScore}
-              instruction={instruction}
-              setInstruction={setInstruction}
-              arrayScreen={arrayScreen}
-              setArrayScreen={setArrayScreen}
-              numberScreen={numberScreen}
-              setNumberScreen={setNumberScreen}
-            />
+              <Buttons
+                arrayGame={arrayGame}
+                arrayUser={arrayUser}
+                setArrayUser={setArrayUser}
+                score={score}
+                setScore={setScore}
+                instruction={instruction}
+                setInstruction={setInstruction}
+                arrayScreen={arrayScreen}
+                setArrayScreen={setArrayScreen}
+                numberScreen={numberScreen}
+                setNumberScreen={setNumberScreen}
+              />
+            </StyledBorder>
           </StyledGame>
         </>
       )}
