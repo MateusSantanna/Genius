@@ -21,15 +21,27 @@ const error = keyframes`
   }
 `;
 
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+`;
+
 export const ResultInstructions = styled.p`
   color: black;
-  font-size: 8rem;
+  font-size: 4rem;
   width: 15rem;
   height: 5rem;
-  background-color: green;
+  background-color: #1a2a2c;
   text-align: center;
   margin: auto;
   margin-bottom: 1rem;
+
+  @media (min-width: 769px) {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
 
   @media (max-width: 768px) {
     font-size: 2.5rem;
@@ -74,18 +86,5 @@ export const WrongAnswer = styled.p`
   width: 5rem;
   height: 5rem;
   color: white;
-  margin-left: 9rem;
   margin-bottom: 1rem;
-
-  @media (max-width: 768px) {
-    font-size: 4rem;
-    margin-left: 6rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 19rem;
-    margin-left: 3rem;
-    width: 4rem;
-    height: 4rem;
-  }
 `;

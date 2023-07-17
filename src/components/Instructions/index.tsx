@@ -1,5 +1,10 @@
 import { IInstruction } from "../../interfaces/interfaces";
-import { ResultInstructions, CorrectAnswer, WrongAnswer } from "./style";
+import {
+  ResultInstructions,
+  CorrectAnswer,
+  WrongAnswer,
+  Container,
+} from "./style";
 
 function Instructions({ instruction }: IInstruction) {
   const receiveInstruction = (response: string) => {
@@ -19,7 +24,7 @@ function Instructions({ instruction }: IInstruction) {
       return <ResultInstructions>Decore os números</ResultInstructions>;
     }
   };
-  return <div>{receiveInstruction(instruction)}</div>;
+  return <Container>{receiveInstruction(instruction)}</Container>;
 }
 
 export default Instructions;

@@ -171,4 +171,25 @@ export const EffectNumber = styled.button`
   &.button {
     animation: ${blink} 0.5s infinite;
   }
+
+  @media (max-width: 768px) {
+    ${OneToThree}, ${FourToSix}, ${SevenToNine}, ${Zero} {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      margin: 0.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    ${OneToThree}, ${FourToSix}, ${SevenToNine}, ${Zero} {
+      button {
+        font-size: 2rem;
+        width: 2rem;
+        height: 3rem;
+      }
+    }
+  }
 `;
