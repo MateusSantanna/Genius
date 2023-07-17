@@ -40,4 +40,14 @@ export const BeginGame = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 8rem;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  button {
+    font-size: 2rem;
+  }
 `;
+
+export const StyledGame = styled.div``;
