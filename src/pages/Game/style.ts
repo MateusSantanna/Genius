@@ -27,6 +27,7 @@ export const StyledBorder = styled.div`
   width: 80%;
   height: 30%;
   background-color: white;
+  border-radius: 3rem;
 `;
 
 export const BeginGame = styled.div`
