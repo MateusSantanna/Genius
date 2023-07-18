@@ -29,8 +29,8 @@ export const Container = styled.div`
 `;
 
 export const ResultInstructions = styled.p`
-  color: black;
-  font-size: 4rem;
+  color: white;
+  font-size: 2.5rem;
   width: 15rem;
   height: 5rem;
   background-color: #1a2a2c;
@@ -44,12 +44,10 @@ export const ResultInstructions = styled.p`
   }
 
   @media (max-width: 768px) {
-    font-size: 2.5rem;
     width: 12rem;
   }
 
   @media (max-width: 480px) {
-    font-size: 2.5rem;
     width: 10rem;
   }
 `;
@@ -76,15 +74,15 @@ export const CorrectAnswer = styled.p`
 
 export const WrongAnswer = styled.p`
   display: inline-block;
-  font-size: 5rem;
   font-weight: bold;
   overflow: hidden;
   white-space: nowrap;
   animation: ${error} 0.5s infinite;
   background-color: white;
+  color: white;
   text-align: center;
   width: 5rem;
   height: 5rem;
-  color: white;
+  font-size: 5rem;
   margin-bottom: 1rem;
 `;

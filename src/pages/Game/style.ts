@@ -27,10 +27,6 @@ export const StyledBorder = styled.div`
   width: 80%;
   height: 30%;
   background-color: white;
-
-  @media (min-width: 768px) {
-    width: 30%;
-  }
 `;
 
 export const BeginGame = styled.div`
