@@ -4,13 +4,7 @@ Um jogo inspirado no Genius, onde o objetivo é acertar a sequencia de números 
 
 # Tecnologias utilizadas
 
-HTML
-CSS
-React
-React-Hooks
-Typescript
-Vite
-Styled-Components
+HTML, CSS, React, React-Hooks, Typescript, Vite, Styled-Components
 
 # Considerações Finais
 
