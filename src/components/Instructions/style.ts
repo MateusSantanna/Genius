@@ -77,7 +77,7 @@ export const WrongAnswer = styled.p`
   font-weight: bold;
   overflow: hidden;
   white-space: nowrap;
-  animation: ${error} 0.5s infinite;
+  animation: ${error} 1s infinite;
   background-color: white;
   color: white;
   text-align: center;

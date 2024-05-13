@@ -8,10 +8,13 @@ import {
   NumberScreen,
   StyledBorder,
   StyledGame,
+  HowToPlayConteiner,
+  Information,
 } from "./style";
 import classnames from "classnames";
 
 const Game = () => {
+  const [options, setOptions] = useState<boolean>(false);
   const [begin, setBegin] = useState<boolean>(false);
   const [arrayGame, setArrayGame] = useState<number[]>([]);
   const [arrayScreen, setArrayScreen] = useState<number[]>(arrayGame);
@@ -53,7 +56,6 @@ const Game = () => {
     setArrayScreen(arrayGame);
     setArrayUser([]);
     setScore(0);
-    setInstruction("Decore os Números");
   }
 
   const generateRandomColor = () => {
@@ -78,7 +80,22 @@ const Game = () => {
           <BeginGame>
             <h1>BEM VINDO AO GENIUS</h1>
             <button onClick={generateNumber}>Começar</button>
+            <button onClick={() => setOptions(true)}>Como Jogar</button>
           </BeginGame>
+
+          {options == true ? (
+            <HowToPlayConteiner>
+              <Information>
+                <button onClick={() => setOptions(false)}>X</button>
+                <h1>Esse Jogo foi inspirado no Genius.</h1>
+                <h1>
+                  Acompanhe a sequência de números da tela, e depois repita
+                  clicando nos números mostrados.
+                </h1>
+                <h1>Se você errar a sequência, Fim de Jogo.</h1>
+              </Information>
+            </HowToPlayConteiner>
+          ) : null}
         </>
       ) : (
         <>

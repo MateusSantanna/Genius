@@ -28,6 +28,9 @@ export const StyledBorder = styled.div`
   height: 30%;
   background-color: white;
   border-radius: 3rem;
+
+  @media (min-width: 480px) {
+  }
 `;
 
 export const BeginGame = styled.div`
@@ -48,6 +51,7 @@ export const BeginGame = styled.div`
 
   button {
     font-size: 2rem;
+    margin-top: 2rem;
     @media (max-width: 480px) {
       font-size: 1.5rem;
     }
@@ -90,4 +94,50 @@ export const CorrectAnswer = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
   }
+`;
+
+export const HowToPlayConteiner = styled.div`
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 35rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  font-size: 1.25rem;
+  color: #ffff;
+
+  div {
+    width: 100%;
+    height: 20rem;
+    background: grey;
+    padding: 1.5rem;
+  }
+
+  button:hover {
+    background: #404040;
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: red;
+    float: right;
+    font-size: 2.5rem;
+    margin-left: 1rem;
+  }
+
+  h1 {
+    margin-top: 1.5rem;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  @media (min-width: 480px) {
+  }
+`;
+
+export const Information = styled.div`
+  margin-top: 3rem;
 `;
