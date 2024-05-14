@@ -12,12 +12,15 @@ const write = keyframes`
 const error = keyframes`
   0% {
     background-color: white;
+    color: rgba(132, 13, 10);
   }
   50% {
-    background-color: red;
+    background-color: black;
+    color: white;
   }
   100% {
     background-color: white;
+    color: black;
   }
 `;
 
@@ -75,14 +78,12 @@ export const CorrectAnswer = styled.p`
 export const WrongAnswer = styled.p`
   display: inline-block;
   font-weight: bold;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: ${error} 1s infinite;
+
+  animation: ${error} 0.5s infinite;
   background-color: white;
-  color: white;
+  color: red;
   text-align: center;
-  width: 5rem;
-  height: 5rem;
-  font-size: 5rem;
-  margin-bottom: 1rem;
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
 `;

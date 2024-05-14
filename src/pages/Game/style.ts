@@ -50,10 +50,14 @@ export const BeginGame = styled.div`
   }
 
   button {
+    width: 70%;
+    height: 4rem;
     font-size: 2rem;
     margin-top: 2rem;
-    @media (max-width: 480px) {
+
+    @media (min-width: 320px) {
       font-size: 1.5rem;
+      margin-left: 4rem;
     }
   }
 `;
@@ -135,6 +139,7 @@ export const HowToPlayConteiner = styled.div`
   }
 
   @media (min-width: 480px) {
+    font-size: xxx-large;
   }
 `;
 

@@ -17,7 +17,7 @@ export const OneToThree = styled.div`
     font-size: 3rem;
     margin-left: 1rem;
     margin-top: 2rem;
-    background-color: blue;
+    background-color: #404040;
     color: white;
     width: 3rem;
     height: 4rem;
@@ -34,7 +34,7 @@ export const FourToSix = styled.div`
     font-size: 3rem;
     margin-left: 1rem;
     margin-top: 2rem;
-    background-color: blue;
+    background-color: #404040;
     color: white;
     width: 3rem;
     height: 4rem;
@@ -51,7 +51,7 @@ export const SevenToNine = styled.div`
     font-size: 3rem;
     margin-left: 1rem;
     margin-top: 2rem;
-    background-color: blue;
+    background: #404040;
     color: white;
     width: 3rem;
     height: 4rem;
@@ -68,7 +68,7 @@ export const Zero = styled.div`
     font-size: 3rem;
     margin-left: 1rem;
     margin-top: 2rem;
-    background-color: blue;
+    background-color: #404040;
     color: white;
     width: 3rem;
     height: 4rem;
@@ -82,9 +82,10 @@ export const OneToThreeClick = styled.div`
   justify-content: center;
 
   button {
+    border: none;
     font-size: 3rem;
     margin-left: 1rem;
-    background-color: blue;
+    background-color: #000080;
     color: white;
     width: 3rem;
     height: 4rem;
@@ -100,10 +101,11 @@ export const FourToSixClick = styled.div`
   justify-content: center;
 
   button {
+    border: none;
     font-size: 3rem;
     margin-left: 1rem;
     margin-top: 2rem;
-    background-color: blue;
+    background-color: #000080;
     color: white;
     width: 3rem;
     height: 4rem;
@@ -120,10 +122,11 @@ export const SevenToNineClick = styled.div`
   justify-content: center;
 
   button {
+    border: none;
     font-size: 3rem;
     margin-left: 1rem;
     margin-top: 2rem;
-    background-color: blue;
+    background-color: #000080;
     color: white;
     width: 3rem;
     height: 4rem;
@@ -140,10 +143,11 @@ export const ZeroClick = styled.div`
   justify-content: center;
 
   button {
+    border: none;
     font-size: 3rem;
     margin-left: 1rem;
     margin-top: 2rem;
-    background-color: blue;
+    background-color: #000080;
     color: white;
     width: 3rem;
     height: 4rem;

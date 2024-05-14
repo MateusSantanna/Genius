@@ -35,4 +35,16 @@ export interface IButtons {
   setInstruction: (value: string) => void;
   numberScreen: number;
   setNumberScreen: (value: number) => void;
+  setGameOver: (value: boolean) => void;
+}
+
+export interface IGameOver {
+  score: number;
+  arrayGame: number[];
+  setScore: (value: number) => void;
+  setBegin: (value: boolean) => void;
+  setArrayGame: (value: number[]) => void;
+  setArrayScreen: (value: number[]) => void | undefined;
+  setArrayUser: (value: number[]) => void | undefined;
+  setGameOver: (value: boolean) => void;
 }

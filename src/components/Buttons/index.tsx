@@ -19,6 +19,7 @@ const Buttons = ({
   setScore,
   instruction,
   setInstruction,
+  setGameOver,
 }: IButtons) => {
   useEffect(() => {
     let isCorrect = true;
@@ -37,6 +38,7 @@ const Buttons = ({
       }
     } else {
       setInstruction("Resposta Errada");
+      setGameOver(true);
     }
   }, [arrayUser]);
 

@@ -12,8 +12,10 @@ import {
   Information,
 } from "./style";
 import classnames from "classnames";
+import EndGame from "@/components/EndGame";
 
 const Game = () => {
+  const [gameOver, setGameOver] = useState<boolean>(false);
   const [options, setOptions] = useState<boolean>(false);
   const [begin, setBegin] = useState<boolean>(false);
   const [arrayGame, setArrayGame] = useState<number[]>([]);
@@ -49,14 +51,6 @@ const Game = () => {
       setTimeout(countNumbers, 500);
     }
   }, [begin, arrayScreen]);
-
-  function endGame() {
-    setBegin(false);
-    setArrayGame([]);
-    setArrayScreen(arrayGame);
-    setArrayUser([]);
-    setScore(0);
-  }
 
   const generateRandomColor = () => {
     const colors = ["white"];
@@ -99,6 +93,18 @@ const Game = () => {
         </>
       ) : (
         <>
+          {gameOver == true ? (
+            <EndGame
+              score={score}
+              arrayGame={arrayGame}
+              setBegin={setBegin}
+              setArrayUser={setArrayUser}
+              setScore={setScore}
+              setArrayScreen={setArrayScreen}
+              setArrayGame={setArrayGame}
+              setGameOver={setGameOver}
+            />
+          ) : null}
           <StyledGame>
             <StyledBorder>
               <Score score={score} />
@@ -124,14 +130,6 @@ const Game = () => {
                 </>
               ) : null}
 
-              {instruction === "Resposta Errada" ? (
-                <>
-                  <CorrectAnswer>
-                    <button onClick={() => endGame()}>Voltar ao Menu</button>
-                  </CorrectAnswer>
-                </>
-              ) : null}
-
               <Buttons
                 arrayGame={arrayGame}
                 arrayUser={arrayUser}
@@ -144,6 +142,7 @@ const Game = () => {
                 setArrayScreen={setArrayScreen}
                 numberScreen={numberScreen}
                 setNumberScreen={setNumberScreen}
+                setGameOver={setGameOver}
               />
             </StyledBorder>
           </StyledGame>
