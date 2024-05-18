@@ -15,22 +15,12 @@ function EndGame({
   function results(number: number) {
     if (number === 0) {
       return "Não desanime😥";
-    }
-
-    if (number >= 1 || number <= 5) {
+    } else if (number > 0 && number < 10) {
       return "Está quase lá 😊";
-    }
-
-    if (number >= 6 || number <= 10) {
+    } else if (number >= 10 && number < 20) {
       return "Você é bom 💪";
-    }
-
-    if (number >= 11 || number <= 20) {
-      return "Que memória espetacular 🧠";
-    }
-
-    if (number > 20) {
-      return "SIIIIIIIIIIU 🏆";
+    } else if (number >= 20) {
+      return "Que memória espetacular 🧠🏆";
     }
   }
   function playAgain() {
